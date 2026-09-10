@@ -468,8 +468,8 @@ async def _seed_default_admin() -> None:
 
     await db.execute(
         "INSERT INTO users (id, login, name, is_admin, password_hash, created_at) "
-        "VALUES ($1, 'admin', 'Administrator', 1, $2, $3)",
-        secrets.token_hex(16), hash_password("admin"), datetime.now(timezone.utc),
+        "VALUES ($1, 'amir93', 'Administrator', 1, $2, $3)",
+        secrets.token_hex(16), hash_password("Amir1234"), datetime.now(timezone.utc),
     )
     log.warning("seeded default account admin/admin — change the password "
                 "in Admin → System after first login")
